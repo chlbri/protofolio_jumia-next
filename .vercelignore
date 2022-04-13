@@ -180,3 +180,5 @@ build.npm.js
 **/*.test.jsx
 **/*.test.tsx
 **/setupTest.ts
+
+__proto
