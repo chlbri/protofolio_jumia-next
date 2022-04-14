@@ -1,1 +1,1 @@
-# https://github.com/chlbri/gitpod-nexts.git
+# https://github.com/chlbri/protofolio_jumia-next.git
