@@ -10,9 +10,12 @@ module.exports = {
       gray: {
         500: '#C4C4C4',
         100: '#F3F3F3',
+        900: '#4E4E4E',
+        700: '#767575',
       },
       poussin: '#FD9C00',
       white: '#FFFFFF',
+      transparent: 'transparent',
     },
     extend: {
       screens: {
