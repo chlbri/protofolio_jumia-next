@@ -5,7 +5,7 @@ const Document: FC = () => {
   return (
     <Html>
       <Head></Head>
-      <body className="min-h-screen min-w-[350px] scroll-smooth text-white">
+      <body className="min-h-screen min-w-[350px] scroll-smooth">
         <Main />
         <NextScript />
       </body>

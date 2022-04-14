@@ -6,10 +6,19 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      gray: {
+        500: '#C4C4C4',
+        100: '#F3F3F3',
+      },
+      poussin: '#FD9C00',
+      white: '#FFFFFF',
+    },
     extend: {
-      // screens: {
-      //   '3xl': '2000px',
-      // },
+      screens: {
+        '2xl': '1600px',
+        '3xl': '2000px',
+      },
     },
   },
   variants: {
