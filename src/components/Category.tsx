@@ -42,9 +42,7 @@ export const NavCategories: FC = () => {
       </Category>
       <Category>{[<Icon_TV />, 'Électronique']}</Category>
       <Category>{[<Icon_BeautyClean />, 'Beauté et hygiène']}</Category>
-      <Category>{[<Icon_TV />, 'Beauté et hygiène']}</Category>
       <Category>{[<Icon_Baby />, 'Produits pour bébé']}</Category>
-      <Category>{[<Icon_TV />, 'Électronique']}</Category>
       <Category>
         {[<Icon_Agriculture />, 'Agriculture et Élevage']}
       </Category>
