@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { theme } from '../../../tailwind.config';
+import { DEFAULT_ICON_WIDTH_REM } from '../../constants/dimensions';
 
 type Props = {
   sizeRem?: number;
@@ -7,7 +8,7 @@ type Props = {
 };
 
 export const Icon_ShopBasket: FC<Props> = ({
-  sizeRem = 1.5,
+  sizeRem = DEFAULT_ICON_WIDTH_REM,
   fill = theme.colors.poussin,
 }) => {
   return (

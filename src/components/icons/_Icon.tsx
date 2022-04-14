@@ -1,10 +1,14 @@
 import { FC } from 'react';
+import { DEFAULT_ICON_WIDTH_REM } from '../../constants/dimensions';
 type Props = {
   sizeRem?: number;
   children: string;
 };
 
-export const _Icon: FC<Props> = ({ sizeRem, children }) => {
+export const _IconPath: FC<Props> = ({
+  sizeRem = DEFAULT_ICON_WIDTH_REM,
+  children,
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

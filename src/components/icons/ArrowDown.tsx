@@ -1,10 +1,13 @@
 import { FC } from 'react';
-import { _Icon } from './_Icon';
+import { DEFAULT_ICON_WIDTH_REM } from '../../constants/dimensions';
+import { _IconPath } from './_Icon';
 
 type Props = {
   sizeRem?: number;
 };
 
-export const Icon_ArrowDown: FC<Props> = ({ sizeRem = 1 }) => {
-  return <_Icon sizeRem={sizeRem}>M19 9l-7 7-7-7</_Icon>;
+export const Icon_ArrowDown: FC<Props> = ({
+  sizeRem = DEFAULT_ICON_WIDTH_REM,
+}) => {
+  return <_IconPath sizeRem={sizeRem}>M19 9l-7 7-7-7</_IconPath>;
 };
