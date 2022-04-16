@@ -16,6 +16,7 @@
   "dependencies": {
     "@tippyjs/react": "^4.2.6",
     "@xstate/immer": "^0.3.1",
+    "@xstate/react": "^3.0.0",
     "cookie": "^0.4.2",
     "dayjs": "^1.10.7",
     "immer": "^9.0.6",

@@ -1,16 +1,16 @@
 import { assign } from '@xstate/immer';
-import { createMachine } from 'xstate';
-import { LanguagesContext, languagesContext } from './context';
-import { LanguagesEvents } from './events';
+import { createMachine, sendParent } from 'xstate';
+import { LocalesContext, localesContext } from './context';
+import { LocalesEvents } from './events';
 
-export const languageMachine = createMachine(
+export const localesMachine = createMachine(
   {
     initial: 'idle',
-    context: languagesContext,
+    context: localesContext,
     tsTypes: {} as import('./machine.typegen').Typegen0,
     schema: {
-      context: {} as LanguagesContext,
-      events: {} as LanguagesEvents,
+      context: {} as LocalesContext,
+      events: {} as LocalesEvents,
     },
     states: {
       idle: {
@@ -25,6 +25,7 @@ export const languageMachine = createMachine(
         initial: 'changing',
         states: {
           normal: {
+            entry: 'updateParent',
             exit: 'inc',
             on: {
               CHANGE_LANGUAGE: {
@@ -33,24 +34,21 @@ export const languageMachine = createMachine(
               },
             },
           },
+
           changing: {
             entry: 'changeCurrent',
             exit: 'inc',
-            after: {
-              '300': {
-                target: 'normal',
-              },
-            },
+            always: 'normal',
           },
         },
       },
     },
-    id: 'languages',
+    id: 'locales',
   },
   {
     actions: {
-      changeLocale: assign((context, event) => {
-        context.locale = event.locale;
+      changeLocale: assign((context, { locale }) => {
+        context.locale = locale;
       }),
       changeCurrent: assign(context => {
         context.current = context.locales[context.locale];
@@ -58,6 +56,11 @@ export const languageMachine = createMachine(
       inc: assign(context => {
         context.iterator++;
       }),
+      updateParent: sendParent(ctx => ({
+        type: 'LOCALES.UPDATE',
+        locale: ctx.locale,
+        current: ctx.current,
+      })),
     },
   },
 );

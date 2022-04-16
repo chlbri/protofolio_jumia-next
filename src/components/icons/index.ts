@@ -14,6 +14,7 @@ export * from './Kiosk';
 export * from './Others';
 export * from './PersonVoice';
 export * from './Question';
+export * from './Search';
 export * from './ShopBasket';
 export * from './Smartphone';
 export * from './TV';

@@ -1,13 +1,13 @@
 import { locales } from './locales';
 
-export type LanguagesContext = {
+export type LocalesContext = {
   iterator: number;
   locales: typeof locales;
   locale: keyof typeof locales;
   current: typeof locales[keyof typeof locales];
 };
 
-export const languagesContext: LanguagesContext = {
+export const localesContext: LocalesContext = {
   iterator: 0,
   locales,
   locale: 'fr',

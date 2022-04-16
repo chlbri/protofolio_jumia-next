@@ -5,9 +5,11 @@ export interface Typegen0 {
   eventsCausingActions: {
     changeLocale: 'CHANGE_LANGUAGE';
     inc: 'xstate.init';
+    updateParent: '';
     changeCurrent: 'CHANGE_LANGUAGE';
   };
   internalEvents: {
+    '': { type: '' };
     'xstate.init': { type: 'xstate.init' };
   };
   invokeSrcNameMap: {};
