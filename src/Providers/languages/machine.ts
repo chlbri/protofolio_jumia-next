@@ -1,9 +1,17 @@
+import { assign } from '@xstate/immer';
 import { createMachine } from 'xstate';
+import { LanguagesContext, languagesContext } from './context';
+import { LanguagesEvents } from './events';
 
-export const languageMachine =
-  /** @xstate-layout N4IgpgJg5mDOIC5QBsCGA7KBXVMB0AlhMmAMQDKAKgIIBKlioADgPawEAuBL6jIAHogC0AFhEA2POICsAZnEBGAAwiA7AvEBOaQCZZAGhABPRLNUAOPKtVLzskTpF2djkQF83htJhz5YHVAAnDkg8dBZAgFtUZFIAYQAJagA5AHEAUQB9ABkU1IBVagy+VnYuHj5BBCEFaUtZHWknEWklHXNnA2NTVR08WSaFe01xEU1zMY8vDGxcMDx-IJCIPABjAAsZgkxSfkWQvFQAMxDAgApZJSUASlJvWb8A4NCNrcwStk5uXiQBYVr6o1mq12p1DCYEA4lP1BrJNE5FEpVOIPJ4QOEIHA+PdfPMiCQPmVvpVhHVpHhNPZzE0xqoBi1waY1HgdDZzC5ZOYlGY5Ci0Ti5gsnsswhFoshCV8Kr8qsyFKoWo07AoVbUFIyEGZZHg2rZudzlBIFVMQALHksXptMNsoJLyj9QFUhLJ5VJecoFE5VNJVJSNWZobpbDpNPDHJohrITWb5otnhA7cSZcJ7Ao3fIPV6fX7uggQ6o8EGJvL8yolNJozNcYnpY7hOIlJoKVSaZo6U1pBqXCJCzpbLIB4PB+5UUA */
-  createMachine({
+export const languageMachine = createMachine(
+  {
     initial: 'idle',
+    context: languagesContext,
+    tsTypes: {} as import('./machine.typegen').Typegen0,
+    schema: {
+      context: {} as LanguagesContext,
+      events: {} as LanguagesEvents,
+    },
     states: {
       idle: {
         exit: 'inc',
@@ -20,11 +28,13 @@ export const languageMachine =
             exit: 'inc',
             on: {
               CHANGE_LANGUAGE: {
+                actions: 'changeLocale',
                 target: 'changing',
               },
             },
           },
           changing: {
+            entry: 'changeCurrent',
             exit: 'inc',
             after: {
               '300': {
@@ -36,4 +46,18 @@ export const languageMachine =
       },
     },
     id: 'languages',
-  });
+  },
+  {
+    actions: {
+      changeLocale: assign((context, event) => {
+        context.locale = event.locale;
+      }),
+      changeCurrent: assign(context => {
+        context.current = context.locales[context.locale];
+      }),
+      inc: assign(context => {
+        context.iterator++;
+      }),
+    },
+  },
+);
