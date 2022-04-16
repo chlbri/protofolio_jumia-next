@@ -1,7 +1,13 @@
-import type {AppProps} from 'next/app';
+import type { AppProps } from 'next/app';
+import { Provider } from '../Providers';
 import '../styles/global.css';
 
-function MyApp({Component, pageProps}: AppProps): JSX.Element {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <Provider>
+      <Component {...pageProps} />;
+    </Provider>
+  );
 }
-export default MyApp;
+
+export default App;
