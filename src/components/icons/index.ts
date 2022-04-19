@@ -1,6 +1,7 @@
 export * from './Agriculture';
 export * from './Apple';
 export * from './ArrowDown';
+export * from './ArrowRight';
 export * from './Assistance';
 export * from './Baby';
 export * from './BeautyClean';
