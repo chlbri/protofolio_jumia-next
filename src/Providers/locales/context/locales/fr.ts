@@ -92,19 +92,19 @@ export const fr = {
     listSubsidiaries: {
       officalShops: {
         title: 'Boutiques officielles',
-        icon: 'shopBag',
+        href: undefined,
       },
       express: {
         title: 'Colis Express',
-        icon: 'expressDelivery',
+        href: undefined,
       },
       deals: {
         title: 'Jumia+ deals',
-        icon: 'deals',
+        href: undefined,
       },
       food: {
         title: 'Jumia+ food',
-        icon: 'food',
+        href: undefined,
       },
     },
     flash: {
@@ -118,7 +118,7 @@ export const fr = {
           'Ce site web utilise des cookies. Pour plus d’informations sur la façon dont nous utilisons les cookies, vous pouvez lire notre',
         link: {
           text: 'politique de confidentialité',
-          href: 'https://www.google.com',
+          href: undefined,
         },
       },
     },

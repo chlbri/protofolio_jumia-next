@@ -5,7 +5,7 @@ import { JumiaLogo } from './JumiaLogo';
 
 export const NavBar: FC = () => {
   return (
-    <div className="h-[77px] bg-white flex items-center w-full px-1 mb-[14px] justify-center">
+    <div className="h-[77px] bg-white flex items-center w-full px-1 justify-center">
       <JumiaLogo />
       <Input_Search />
       <Btn_Search />

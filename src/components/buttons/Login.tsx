@@ -9,7 +9,7 @@ const selector = (state: State) =>
 export const Btn_Login: FC = () => {
   const { href, label } = useState(selector);
   return (
-    <div className="flex space-x-2 mr-[25px] items-center">
+    <div className="flex space-x-2 mr-[25px] items-center cursor-pointer">
       <Icon_PersonVoice />
       <a className="font-semibold w-max text-sm" href={href}>
         {label}

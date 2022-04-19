@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-key */
 import { FC, useEffect } from 'react';
-import { AsideCTA, HeaderPub, NavBar, NavCategories } from '../components';
+import { HeaderPub, NavBar } from '../components';
+import { Hero } from '../components/Hero';
+import { RedFlash } from '../components/RedFlash';
+import { Subsidiaries } from '../components/Subsidiaries';
 import { useSend } from '../Providers';
 
 function useStart() {
@@ -15,16 +18,12 @@ const Index: FC = () => {
   return (
     <div className="">
       <HeaderPub />
-      <div className="bg-gray-100">
-        <div className="max-w-[1200px] w-11/12 flex flex-col mx-auto">
+      <div className="bg-gray-100 pb-20">
+        <div className="max-w-[1200px] w-11/12 flex flex-col mx-auto  space-y-5">
           <NavBar />
-          <div className="flex w-full space-x-2 py-1">
-            <NavCategories />
-            <div className="bg-gray-700 flex-grow rounded-md">
-              {/* TODO: Carrousel */}
-            </div>
-            <AsideCTA />
-          </div>
+          <Hero />
+          <Subsidiaries />
+          <RedFlash />
         </div>
       </div>
     </div>
