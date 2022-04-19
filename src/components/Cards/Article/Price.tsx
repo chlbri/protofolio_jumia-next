@@ -13,13 +13,20 @@ export const Price: FC<Props> = ({
   currency,
 }) => {
   return !discountPercentage ? (
-    <span className="text-lg">{priceWithCurrency(price, currency)}</span>
+    <span className="text-lg font-semibold">
+      {priceWithCurrency(price, currency)}
+    </span>
   ) : (
-    <>
-      {priceWithCurrency(
-        priceWithDiscount(price, discountPercentage),
-        currency,
-      )}
-    </>
+    <div className="flex flex-col">
+      <span className="text-lg font-semibold">
+        {priceWithCurrency(
+          priceWithDiscount(price, discountPercentage),
+          currency,
+        )}
+      </span>
+      <span className="line-through text-gray-700">
+        {priceWithCurrency(price, currency)}
+      </span>
+    </div>
   );
 };

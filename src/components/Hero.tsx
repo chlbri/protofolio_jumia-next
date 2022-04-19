@@ -4,7 +4,7 @@ import { NavCategories } from './Category';
 
 export const Hero: FC = () => {
   return (
-    <div className="flex w-full space-x-2 py-1">
+    <div className="flex w-full space-x-2 pt-1">
       <NavCategories />
       <div className="bg-gray-700 flex-grow rounded-md">
         {/* TODO: Carrousel */}
