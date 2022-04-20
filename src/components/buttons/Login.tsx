@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { State, useState } from '../../Providers';
-import { Icon_ArrowDown } from '../icons/ArrowDown';
+import { DropDown_Login } from '../DropDowns';
 import { Icon_PersonVoice } from '../icons/PersonVoice';
 
 const selector = (state: State) =>
@@ -8,13 +8,17 @@ const selector = (state: State) =>
 
 export const Btn_Login: FC = () => {
   const { href, label } = useState(selector);
+
   return (
-    <div className="flex space-x-2 mr-[25px] items-center cursor-pointer">
+    <div className="flex space-x-1 mr-[25px] items-center cursor-pointer relative">
       <Icon_PersonVoice />
-      <a className="font-semibold w-max text-sm" href={href}>
+      <a
+        className="font-semibold w-max text-sm hover:text-poussin active:scale-95 transition-transform duration-150 ease-out"
+        href={href}
+      >
         {label}
       </a>
-      <Icon_ArrowDown />
+      <DropDown_Login />
     </div>
   );
 };

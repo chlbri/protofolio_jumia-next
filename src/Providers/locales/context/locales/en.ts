@@ -5,6 +5,28 @@ export const en = {
       btnHelp: {
         label: 'Help',
         href: undefined as string | undefined,
+        menu: {
+          assistance: {
+            label: 'Support Center',
+            href: undefined as string | undefined,
+          },
+          followCommand: {
+            label: 'Place and track my order',
+            href: undefined as string | undefined,
+          },
+          cancelComand: {
+            label: 'Cancel my order',
+            href: undefined as string | undefined,
+          },
+          return: {
+            label: 'Return & refund',
+            href: undefined as string | undefined,
+          },
+          payment: {
+            label: 'Payment and Jumia+ account',
+            href: undefined as string | undefined,
+          },
+        },
       },
       btnBasket: {
         label: 'Cart',
@@ -13,6 +35,20 @@ export const en = {
       btnLogin: {
         label: 'Login',
         href: undefined as string | undefined,
+        menu: {
+          account: {
+            label: 'Account',
+            href: undefined as string | undefined,
+          },
+          commands: {
+            label: 'Commands',
+            href: undefined as string | undefined,
+          },
+          whishlist: {
+            label: 'Wishlist',
+            href: undefined as string | undefined,
+          },
+        },
       },
       search: {
         placeholder: 'Search for a product, brand or category',
@@ -92,19 +128,19 @@ export const en = {
     listSubsidiaries: {
       officalShops: {
         title: 'Official stores',
-        href: undefined,
+        href: undefined as string | undefined,
       },
       express: {
         title: 'colisExpress',
-        href: undefined,
+        href: undefined as string | undefined,
       },
       deals: {
         title: 'Jumia+ deals',
-        href: undefined,
+        href: undefined as string | undefined,
       },
       food: {
         title: 'Jumia+ food',
-        href: undefined,
+        href: undefined as string | undefined,
       },
     },
     flash: {
@@ -118,7 +154,7 @@ export const en = {
           'This website uses cookies. For more information on how we use cookies, you can read our',
         link: {
           text: 'privacy policy',
-          href: undefined,
+          href: undefined as string | undefined,
         },
       },
     },

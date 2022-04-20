@@ -11,7 +11,7 @@ type ButtonProps = {
 const Button: FC<ButtonProps> = ({ children, label, href }) => {
   return (
     <a
-      className="py-2 space-x-3 flex items-center px-4 bg-white rounded min-w-[280px] shadow cursor-pointer"
+      className="py-2 space-x-3 flex items-center px-4 bg-white rounded min-w-[250px] shadow cursor-pointer"
       href={href}
     >
       {children}

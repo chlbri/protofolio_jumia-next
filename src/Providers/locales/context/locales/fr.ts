@@ -5,6 +5,28 @@ export const fr = {
       btnHelp: {
         label: 'Aide',
         href: undefined as string | undefined,
+        menu: {
+          assistance: {
+            label: "Centre d'assistance",
+            href: undefined as string | undefined,
+          },
+          followCommand: {
+            label: 'Passer et suivre ma commande',
+            href: undefined as string | undefined,
+          },
+          cancelComand: {
+            label: 'Annuler ma commande',
+            href: undefined as string | undefined,
+          },
+          return: {
+            label: 'Retour & remboursemment',
+            href: undefined as string | undefined,
+          },
+          payment: {
+            label: 'Paiement et compte Jumia+',
+            href: undefined as string | undefined,
+          },
+        },
       },
       btnBasket: {
         label: 'Panier',
@@ -13,6 +35,20 @@ export const fr = {
       btnLogin: {
         label: 'Se connecter',
         href: undefined as string | undefined,
+        menu: {
+          account: {
+            label: 'Votre compte',
+            href: undefined as string | undefined,
+          },
+          commands: {
+            label: 'Vos commandes',
+            href: undefined as string | undefined,
+          },
+          whishlist: {
+            label: "Votre liste d'envies",
+            href: undefined as string | undefined,
+          },
+        },
       },
       search: {
         placeholder: 'Cherchez un produit, une marque ou une catégorie',
