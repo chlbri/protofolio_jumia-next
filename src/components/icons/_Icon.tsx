@@ -4,12 +4,14 @@ type Props = {
   sizeRem?: number;
   children: string;
   stroke?: string;
+  className?: string;
 };
 
 export const _IconPath: FC<Props> = ({
   sizeRem = DEFAULT_ICON_WIDTH_REM,
   children,
   stroke = 'currentColor',
+  className,
 }) => {
   return (
     <svg
@@ -20,6 +22,7 @@ export const _IconPath: FC<Props> = ({
       strokeWidth={2}
       width={`${sizeRem}rem`}
       height={`${sizeRem}rem`}
+      className={className}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d={children} />
     </svg>
