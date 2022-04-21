@@ -31,7 +31,7 @@ const selector = (state: State) =>
 export const AsideCTA: FC = () => {
   const assitances = useState(selector);
   return (
-    <aside className="bg-white px-6 py-4 h-max rounded-lg shadow-sm flex flex-col space-y-4">
+    <aside className="bg-white px-6 py-4 h-max rounded-lg shadow-sm flex flex-col space-y-4 min-w-max">
       <Assistance element={assitances.assistance}>
         <Icon_Assistance sizeRem={2} />
       </Assistance>

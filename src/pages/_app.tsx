@@ -5,7 +5,7 @@ import '../styles/global.css';
 function App({ Component, pageProps }: AppProps) {
   return (
     <Provider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </Provider>
   );
 }

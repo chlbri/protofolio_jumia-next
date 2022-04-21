@@ -11,7 +11,7 @@ type ButtonProps = {
 const Button: FC<ButtonProps> = ({ children, label, href }) => {
   return (
     <a
-      className="py-2 space-x-3 flex items-center px-4 bg-white rounded min-w-[250px] shadow cursor-pointer"
+      className="py-2 space-x-3 flex items-center px-4 bg-white rounded w-full shadow cursor-pointer"
       href={href}
     >
       {children}
@@ -25,7 +25,7 @@ export const Subsidiaries: FC = () => {
     state => state.context.locales.current.index.listSubsidiaries,
   );
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between space-x-4">
       <Button
         label={subs.officalShops.title}
         href={subs.officalShops.href}

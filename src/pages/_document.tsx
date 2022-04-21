@@ -3,9 +3,9 @@ import type { FC } from 'react';
 
 const Document: FC = () => {
   return (
-    <Html>
+    <Html className="scroll-smooth">
       <Head></Head>
-      <body className="min-h-screen min-w-[350px] scroll-smooth">
+      <body className="min-h-screen min-w-[650px]">
         <Main />
         <NextScript />
       </body>

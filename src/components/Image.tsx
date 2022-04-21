@@ -14,7 +14,7 @@ const Image: FC<Props> = ({ src, alt, width, height, aspectRatio }) => {
   return (
     <div className="relative" style={{ width, height, aspectRatio }}>
       {!src ? (
-        <div className="absolute inset-0 bg-gray-700" />
+        <div className="absolute inset-0 bg-gray-600" />
       ) : (
         <NextImage src={src} alt={alt} layout="fill" objectFit="cover" />
       )}
