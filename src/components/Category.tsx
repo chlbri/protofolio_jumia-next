@@ -49,7 +49,7 @@ const selector = (state: State) =>
 export const NavCategories: FC = () => {
   const categories = useState(selector);
   return (
-    <nav className="bg-white px-5 py-3 shadow-lg w-max rounded space-y-2">
+    <nav className="bg-white px-5 py-3 shadow-lg w-max rounded space-y-2 min-w-max">
       <Category element={categories.market}>
         <Icon_Apple />
       </Category>

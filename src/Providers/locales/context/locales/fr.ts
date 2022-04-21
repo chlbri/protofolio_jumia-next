@@ -163,5 +163,21 @@ export const fr = {
         title: 'Nos top deals',
       },
     },
+    freeShipping: {
+      redAlert: {
+        title: 'Livraison Gratuite | Abidjan, Yakro & Bouaké',
+        plus: 'voir plus',
+      },
+    },
+    offers: {
+      redAlert: {
+        title: "Plus d'offres et service",
+      },
+    },
+    bestBrands: {
+      alert: {
+        title: 'Les meilleurs marques',
+      },
+    },
   },
 } as const;

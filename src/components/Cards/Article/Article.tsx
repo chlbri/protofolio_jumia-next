@@ -12,6 +12,7 @@ type Props = {
   remaining: number;
   total: number;
   href?: string;
+  noRemaining?: boolean;
 };
 
 export const Card_Article: FC<Props> = ({
@@ -23,6 +24,7 @@ export const Card_Article: FC<Props> = ({
   remaining,
   total,
   href,
+  noRemaining,
 }) => {
   return (
     <a
@@ -40,9 +42,9 @@ export const Card_Article: FC<Props> = ({
       <div className="ml-2 flex flex-col space-y-1">
         <h1>{title}</h1>
         <Price {...{ price, currency, discountPercentage }} />
-        <span>{remaining} </span>
+        {!noRemaining && <span>{remaining} </span>}
       </div>
-      <Slider {...{ total, remaining }} />
+      {!noRemaining && <Slider {...{ total, remaining }} />}
     </a>
   );
 };
