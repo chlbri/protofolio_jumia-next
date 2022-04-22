@@ -9,6 +9,7 @@ export * from './Bag';
 export * from './BeautyClean';
 export * from './Close';
 export * from './Commandez';
+export * from './Coupon';
 export * from './Deals';
 export * from './Express';
 export * from './FashionM';

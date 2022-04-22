@@ -1,5 +1,5 @@
+import { Card_Article } from 'blac-molecules';
 import { FC } from 'react';
-import { Card_Article } from '../molecules/cards/Article';
 
 export type Article = {
   img?: string;

@@ -1,5 +1,5 @@
+import { Icon_ArrowDown } from 'blac-icons';
 import { FC, MouseEventHandler } from 'react';
-import { Icon_ArrowDown } from '../../atoms/icons';
 
 type Props = {
   open?: boolean;

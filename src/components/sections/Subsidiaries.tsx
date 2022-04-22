@@ -1,11 +1,6 @@
+import { Icon_Bag, Icon_Deals, Icon_Express, Icon_Meal } from 'blac-icons';
+import { useState } from 'blac-providers';
 import { FC, ReactNode } from 'react';
-import { useState } from '../../Providers';
-import {
-  Icon_Bag,
-  Icon_Deals,
-  Icon_Express,
-  Icon_Meal,
-} from '../atoms/icons';
 
 type ButtonProps = {
   children: ReactNode;

@@ -1,17 +1,19 @@
 /* eslint-disable react/jsx-key */
+import { GoTop } from 'blac-atoms';
+import { useOnScreen } from 'blac-hooks';
+import { useSend } from 'blac-providers';
+import {
+  BestBrands,
+  FreeShipping,
+  Hero,
+  NavBar,
+  Offers,
+  RedFlash,
+  Section_HeaderPub,
+  Subsidiaries,
+  TopDeals,
+} from 'blac-sections';
 import { FC, useEffect } from 'react';
-import { NavBar } from '../components';
-import { GoTop } from '../components/atoms';
-import { Section_HeaderPub } from '../components/molecules/others';
-import { BestBrands } from '../components/sections/BestBrands';
-import { FreeShipping } from '../components/sections/FreeShipping';
-import { Hero } from '../components/sections/Hero';
-import { Offers } from '../components/sections/Offers';
-import { RedFlash } from '../components/sections/RedFlash';
-import { Subsidiaries } from '../components/sections/Subsidiaries';
-import { TopDeals } from '../components/sections/TopDeals';
-import { useOnScreen } from '../hooks';
-import { useSend } from '../Providers';
 
 function useStart() {
   const send = useSend();

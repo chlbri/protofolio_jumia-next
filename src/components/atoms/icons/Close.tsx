@@ -1,5 +1,5 @@
+import { DEFAULT_ICON_WIDTH_REM } from 'blac-constants';
 import { FC } from 'react';
-import { DEFAULT_ICON_WIDTH_REM } from '../../../constants/dimensions';
 import { _IconPath } from './_Icon';
 
 type Props = {

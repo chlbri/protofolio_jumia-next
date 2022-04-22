@@ -1,7 +1,7 @@
+import { Interpreter } from 'blac-machines';
 import { useSelector } from '@xstate/react';
 import { useContext as useContextReact } from 'react';
 import { Subscribable } from 'xstate';
-import { Interpreter } from '../main';
 import { MainContext } from './context';
 
 export function useContext() {

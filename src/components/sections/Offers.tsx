@@ -1,6 +1,6 @@
+import { Image } from 'blac-atoms';
+import { useState } from 'blac-providers';
 import { FC } from 'react';
-import { useState } from '../../Providers';
-import { Image } from '../atoms';
 
 const RedAlert: FC = () => {
   const title = useState(
