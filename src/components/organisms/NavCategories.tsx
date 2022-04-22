@@ -1,6 +1,4 @@
 /* eslint-disable react/jsx-key */
-import { FC, SVGProps } from 'react';
-import { State, useState } from '../../Providers';
 import {
   Icon_Agriculture,
   Icon_Apple,
@@ -14,7 +12,10 @@ import {
   Icon_Others,
   Icon_Smartphone,
   Icon_TV,
-} from '../atoms/icons';
+} from 'blac-icons';
+import { State } from 'blac-machines';
+import { useState } from 'blac-providers';
+import { FC, SVGProps } from 'react';
 
 type Element = {
   title: string;

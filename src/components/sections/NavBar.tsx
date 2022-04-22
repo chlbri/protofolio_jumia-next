@@ -1,9 +1,7 @@
+import { JumiaLogo } from 'blac-atoms';
+import { Btn_Basket, Search } from 'blac-molecules';
+import { Btn_Help, Btn_Login } from 'blac-organisms';
 import { FC } from 'react';
-import { JumiaLogo } from '../atoms/JumiaLogo';
-import { Btn_Basket } from '../molecules/others';
-import { Search } from '../molecules/Search';
-import { Btn_Help } from '../organisms/Help';
-import { Btn_Login } from '../organisms/Login';
 
 export const NavBar: FC = () => {
   return (

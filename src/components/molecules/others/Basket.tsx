@@ -1,5 +1,6 @@
+import { State } from 'blac-machines';
+import { useState } from 'blac-providers';
 import { FC } from 'react';
-import { State, useState } from '../../../Providers';
 import { Icon_ShopBasket } from '../../atoms/icons/ShopBasket';
 
 const selector = (state: State) =>

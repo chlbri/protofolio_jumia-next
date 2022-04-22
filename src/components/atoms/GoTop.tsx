@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Icon_ArrowTop } from './icons';
+import { Icon_ArrowTop } from 'blac-icons';
 
 export const GoTop: FC = () => {
   return (

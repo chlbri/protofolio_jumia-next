@@ -1,6 +1,6 @@
 import { useInterpret } from '@xstate/react';
+import { mainMachine } from 'blac-machines';
 import { FC, ReactNode } from 'react';
-import { mainMachine } from '../main';
 import { MainContext } from './context';
 
 type Props = {

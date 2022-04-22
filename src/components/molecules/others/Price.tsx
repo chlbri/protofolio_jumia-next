@@ -1,5 +1,5 @@
+import { priceWithCurrency, priceWithDiscount } from 'blac-adapters';
 import { FC } from 'react';
-import { priceWithCurrency, priceWithDiscount } from '../../helpers';
 
 type Props = {
   discountPercentage?: number;

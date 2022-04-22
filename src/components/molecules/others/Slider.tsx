@@ -1,5 +1,5 @@
+import { theme } from 'blac-theme';
 import { FC } from 'react';
-import { theme } from '../../../tailwind.config';
 
 type Props = {
   remaining: number;
