@@ -1,7 +1,6 @@
+import { Image } from 'blac-atoms';
 import { FC } from 'react';
-import { Image } from '../../atoms';
-import { Price } from '../others';
-import { Slider } from '../Slider';
+import { Price, Slider } from '../others';
 
 export type Card_ArticleProps = {
   img?: string;

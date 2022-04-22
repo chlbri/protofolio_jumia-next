@@ -13,7 +13,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "blac-icons": ["./src/components/atoms/icons"],
+      "blac-atoms": ["./src/components/atoms"],
+      "blac-molecules": ["./src/components/molecules"],
+      "blac-organisms": ["./src/components/organisms"],
+      "blac-sections": ["./src/components/sections"],
+      "blac-machines": ["./src/machines"],
+      "blac-providers": ["src/providers"],
+      "blac-hooks": ["./src/hooks"],
+      "blac-theme": ["./tailwind.config"],
+      "blac-adapters": ["./src/adapters"],
+      "blac-constants": ["./src/constants"]
+    }
   },
   "include": [
     "next-env.d.ts",

@@ -1,7 +1,6 @@
+import { Image } from 'blac-atoms';
+import { AsideCTA, NavCategories } from 'blac-organisms';
 import { FC } from 'react';
-import { Image } from '../atoms';
-import { AsideCTA } from '../organisms/AsideCTA';
-import { NavCategories } from '../organisms/NavCategories';
 
 export const Hero: FC = () => {
   return (

@@ -1,7 +1,8 @@
+import { Icon_Question } from 'blac-icons';
+import { State } from 'blac-machines';
+import { DropDown_Help } from 'blac-molecules';
+import { useState } from 'blac-providers';
 import { FC } from 'react';
-import { State, useState } from '../../Providers';
-import { DropDown_Help } from '../molecules/dropdowns';
-import { Icon_Question } from '../atoms/icons/Question';
 
 const selector = (state: State) =>
   state.context.locales.current._common.topNavBar.btnHelp;

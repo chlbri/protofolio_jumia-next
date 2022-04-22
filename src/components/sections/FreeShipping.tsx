@@ -1,7 +1,7 @@
+import { Icon_ArrowRight } from 'blac-icons';
+import { Card_Article } from 'blac-molecules';
+import { useState } from 'blac-providers';
 import { FC } from 'react';
-import { useState } from '../../Providers';
-import { Card_Article } from '../molecules/cards/Article';
-import { Icon_ArrowRight } from '../atoms/icons';
 
 const RedAlert: FC = () => {
   const locale = useState(

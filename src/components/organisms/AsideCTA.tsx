@@ -1,5 +1,6 @@
+import { State } from 'blac-machines';
+import { useState } from 'blac-providers';
 import { FC, SVGProps } from 'react';
-import { State, useState } from '../../Providers';
 import {
   Icon_Assistance,
   Icon_Commandez,

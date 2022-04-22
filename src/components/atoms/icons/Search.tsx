@@ -1,6 +1,6 @@
+import { DEFAULT_ICON_WIDTH_REM } from 'blac-constants';
 import { FC } from 'react';
 import { theme } from '../../../../tailwind.config';
-import { DEFAULT_ICON_WIDTH_REM } from '../../../constants/dimensions';
 
 type Props = {
   sizeRem?: number;

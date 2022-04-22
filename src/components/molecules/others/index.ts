@@ -1,3 +1,4 @@
 export * from './Basket';
-export * from '../../sections/HeaderPub';
 export * from './Price';
+export * from './Search';
+export * from './Slider';

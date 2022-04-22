@@ -1,9 +1,8 @@
+import { Icon_ArrowRight, Icon_Close, Icon_Coupon } from 'blac-icons';
+import { Card_Article } from 'blac-molecules';
+import { useState } from 'blac-providers';
+import { theme } from 'blac-theme';
 import { FC, useState as useS } from 'react';
-import { theme } from '../../../tailwind.config';
-import { useState } from '../../Providers';
-import { Card_Article } from '../molecules/cards/Article';
-import { Icon_ArrowRight, Icon_Close } from '../atoms/icons';
-import { Icon_Coupon } from '../atoms/icons/Coupon';
 
 type TimerProps = {
   hours: number;
