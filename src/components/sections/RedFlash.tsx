@@ -1,9 +1,9 @@
 import { FC, useState as useS } from 'react';
 import { theme } from '../../../tailwind.config';
 import { useState } from '../../Providers';
-import { Card_Article } from '../molecules/cards/Article';
 import { Icon_ArrowRight, Icon_Close } from '../atoms/icons';
 import { Icon_Coupon } from '../atoms/icons/Coupon';
+import { Card_Article } from '../molecules/cards/Article';
 
 type TimerProps = {
   hours: number;
@@ -39,13 +39,13 @@ const Bottom: FC = () => {
   const [show, setShow] = useS(true);
   return (
     <div
-      className="absolute backdrop-blur-[2px] bg-gray-500/70 flex justify-evenly items-center bottom-0 w-full py-4 z-10 transition-opacity duration-300 ease-out"
+      className="absolute backdrop-blur-[2px] bg-gray-500/70 flex justify-evenly items-center bottom-0 w-full py-3 z-10 transition-opacity duration-300 ease-out"
       style={{ opacity: show ? 1 : 0 }}
     >
-      <div className="font-light">
+      <div className="font-light text-sm 2xl:text-base">
         <span>{locale.invite}</span>{' '}
         <a
-          className="text-blue-500 cursor-pointer"
+          className="text-blue-500 cursor-pointer text-sm 2xl:text-base"
           href={locale.link.href}
         >
           {locale.link.text}

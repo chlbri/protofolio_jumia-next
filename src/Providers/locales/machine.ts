@@ -1,12 +1,12 @@
 import { assign } from '@xstate/immer';
 import { createMachine, sendParent } from 'xstate';
-import { LocalesContext, localesContext } from './context';
+import { localesContext as context, LocalesContext } from './context';
 import { LocalesEvents } from './events';
 
 export const localesMachine = createMachine(
   {
     initial: 'idle',
-    context: localesContext,
+    context,
     tsTypes: {} as import('./machine.typegen').Typegen0,
     schema: {
       context: {} as LocalesContext,
@@ -43,7 +43,6 @@ export const localesMachine = createMachine(
         },
       },
     },
-    id: 'locales',
   },
   {
     actions: {

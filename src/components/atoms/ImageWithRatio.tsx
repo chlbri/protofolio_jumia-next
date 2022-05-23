@@ -10,7 +10,7 @@ type Props = {
   | { width?: never; height: number | string }
 );
 
-export const Image: FC<Props> = ({
+export const ImageWithRatio: FC<Props> = ({
   src,
   alt,
   width,

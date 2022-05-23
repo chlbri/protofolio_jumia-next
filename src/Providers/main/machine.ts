@@ -77,6 +77,7 @@ export const mainMachine =
                   target: '.busy',
                 },
               },
+              initial: 'notBusy',
               states: {
                 busy: {
                   after: {

@@ -54,6 +54,12 @@ export const en = {
         placeholder: 'Search for a product, brand or category',
       },
     },
+    words: {
+      remaining: {
+        singular: 'remaining',
+        plural: 'remaining',
+      },
+    },
   },
   index: {
     heroSection: {
@@ -131,7 +137,7 @@ export const en = {
         href: undefined as string | undefined,
       },
       express: {
-        title: 'colisExpress',
+        title: 'Express Shipping',
         href: undefined as string | undefined,
       },
       deals: {
@@ -171,7 +177,7 @@ export const en = {
     },
     offers: {
       redAlert: {
-        title: "Plus d'offres et service",
+        title: 'More services and products',
       },
     },
     bestBrands: {

@@ -8,13 +8,7 @@ type Props = {
 
 export const Switch_Arrow: FC<Props> = ({ open, onClick }) => {
   return (
-    <button
-      onClick={onClick}
-      className="flex items-center"
-      onMouseEnter={() => {
-        console.log('onMouseEnter');
-      }}
-    >
+    <button onClick={onClick} className="flex items-center">
       <Icon_ArrowDown
         className={`hover:stroke-poussin hover:scale-105 transition duration-300 ease-out ${
           open ? 'rotate-180' : ''

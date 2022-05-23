@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useState } from '../../Providers';
-import { Image } from '../atoms';
+import { ImageWithRatio } from '../atoms';
 
 const RedAlert: FC = () => {
   const title = useState(
@@ -22,7 +22,12 @@ type ElementProps = {
 const Element: FC<ElementProps> = ({ children }) => {
   return (
     <a className="w-full rounded-lg overflow-hidden">
-      <Image alt="image" aspectRatio={RATIO} width="100%" src={children} />
+      <ImageWithRatio
+        alt="image"
+        aspectRatio={RATIO}
+        width="100%"
+        src={children}
+      />
     </a>
   );
 };
