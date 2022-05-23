@@ -1,23 +1,24 @@
 /* eslint-disable react/jsx-key */
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { NavBar } from '../components';
 import { GoTop } from '../components/atoms';
-import { Section_HeaderPub } from '../components/molecules/others';
-import { BestBrands } from '../components/sections/BestBrands';
-import { FreeShipping } from '../components/sections/FreeShipping';
-import { Hero } from '../components/sections/Hero';
-import { Offers } from '../components/sections/Offers';
-import { RedFlash } from '../components/sections/RedFlash';
-import { Subsidiaries } from '../components/sections/Subsidiaries';
-import { TopDeals } from '../components/sections/TopDeals';
+import { ChangeLanguage } from '../components/molecules/others/ChangeLanguage';
+import {
+  BestBrands,
+  FreeShipping,
+  Hero,
+  Offers,
+  RedFlash,
+  Section_HeaderPub,
+  Subsidiaries,
+  TopDeals,
+} from '../components/sections';
 import { useOnScreen } from '../hooks';
 import { useSend } from '../Providers';
 
 function useStart() {
   const send = useSend();
-  useEffect(() => {
-    send('START');
-  }, [send]);
+  send('START');
 }
 
 function useHook() {
@@ -45,6 +46,7 @@ const Index: FC = () => {
         </div>
       </div>
       {!isIntersecting && <GoTop />}
+      <ChangeLanguage />
     </div>
   );
 };

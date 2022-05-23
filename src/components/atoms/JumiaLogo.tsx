@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Image } from './Image';
+import { ImageWithRatio } from './ImageWithRatio';
 
 type Props = {
   width?: number;
@@ -7,7 +7,7 @@ type Props = {
 
 export const JumiaLogo: FC<Props> = ({ width = 122 }) => {
   return (
-    <Image
+    <ImageWithRatio
       width={width}
       aspectRatio="122/44"
       alt="logo"

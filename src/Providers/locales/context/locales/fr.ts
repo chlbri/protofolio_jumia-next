@@ -54,6 +54,12 @@ export const fr = {
         placeholder: 'Cherchez un produit, une marque ou une catégorie',
       },
     },
+    words: {
+      remaining: {
+        singular: 'restant',
+        plural: 'restants',
+      },
+    },
   },
   index: {
     heroSection: {
@@ -171,7 +177,7 @@ export const fr = {
     },
     offers: {
       redAlert: {
-        title: "Plus d'offres et service",
+        title: "Plus d'offres et services",
       },
     },
     bestBrands: {

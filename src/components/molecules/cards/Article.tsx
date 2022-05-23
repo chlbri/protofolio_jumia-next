@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Image } from '../../atoms';
+import { useState } from '../../../Providers';
+import { ImageWithRatio } from '../../atoms';
 import { Price } from '../others';
 import { Slider } from '../Slider';
 
@@ -15,6 +16,19 @@ export type Card_ArticleProps = {
   noRemaining?: boolean;
 };
 
+function useBuildRemainingLTR(remaining: number) {
+  const sp = useState(
+    st => st.context.locales.current._common.words.remaining,
+  );
+  const text = remaining === 1 ? sp.singular : sp.plural;
+  return `${remaining} ${text}`;
+}
+
+function useHook(_remaining: number) {
+  const remainingText = useBuildRemainingLTR(_remaining);
+  return { remainingText } as const;
+}
+
 export const Card_Article: FC<Card_ArticleProps> = ({
   img,
   title,
@@ -26,6 +40,7 @@ export const Card_Article: FC<Card_ArticleProps> = ({
   href,
   noRemaining,
 }) => {
+  const { remainingText } = useHook(remaining);
   return (
     <a
       className="inline-block flex-col p-1 w-1/6 cursor-pointer"
@@ -37,12 +52,12 @@ export const Card_Article: FC<Card_ArticleProps> = ({
             {discountPercentage}%
           </div>
         )}
-        <Image aspectRatio="1/1" alt="" width="100%" src={img} />
+        <ImageWithRatio aspectRatio="1/1" alt="" width="100%" src={img} />
       </div>
       <div className="ml-2 flex flex-col space-y-1">
         <h1>{title}</h1>
         <Price {...{ price, currency, discountPercentage }} />
-        {!noRemaining && <span>{remaining} </span>}
+        {!noRemaining && <span> {remainingText} </span>}
       </div>
       {!noRemaining && <Slider {...{ total, remaining }} />}
     </a>

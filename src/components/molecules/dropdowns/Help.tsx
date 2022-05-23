@@ -1,12 +1,10 @@
 import { FC } from 'react';
-import tw from 'tailwind-styled-components';
 import { useDropDown } from '../../../hooks';
 import { State, useState } from '../../../Providers';
+import { MenuItem } from '../../atoms';
 import { Switch_Arrow } from '../switches/Arrow';
 
 // import { ChevronDownIcon } from '@heroicons/react/solid'
-
-const MenuItem = tw.a`text-gray-900 rounded-md hover:text-blue-500`;
 
 const selector = (state: State) =>
   state.context.locales.current._common.topNavBar.btnHelp.menu;
@@ -25,7 +23,7 @@ export const DropDown_Help: FC = () => {
   const { onClick, menu, ref, dropDownStyle, open } = useHook();
 
   return (
-    <>
+    <div>
       <Switch_Arrow {...{ open, onClick }} />
       <div
         className="p-1 w-max bg-gray-200/30 backdrop-blur-sm right-0 top-full mt-3 rounded-lg transition-all duration-200 ease-out"
@@ -50,6 +48,6 @@ export const DropDown_Help: FC = () => {
           </MenuItem>
         </div>
       </div>
-    </>
+    </div>
   );
 };

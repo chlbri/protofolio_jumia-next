@@ -22,10 +22,12 @@ export function useDropDown(value = false) {
   }, [setOpen]);
 
   const opacity = open ? 1 : 0;
+  const visibility = open ? 'visible' : 'hidden';
   const transform = open ? 'none' : 'translateY(-20px)';
 
   const dropDownStyle: CSSProperties = {
     opacity,
+    visibility,
     transform,
     position: 'absolute',
   };
