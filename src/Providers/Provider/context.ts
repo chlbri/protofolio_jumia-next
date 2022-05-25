@@ -1,7 +1,4 @@
 import { createContext } from 'react';
-import { InterpreterFrom } from 'xstate';
-import { MainMachine } from '../main';
+import { Interpreter } from '../main';
 
-export const MainContext = createContext(
-  {} as InterpreterFrom<MainMachine>,
-);
+export const MainContext = createContext({} as Interpreter);

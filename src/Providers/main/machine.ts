@@ -65,7 +65,6 @@ export const mainMachine =
             locales: {
               entry: 'startLocalesMachine',
               exit: 'inc',
-              id: 'locales',
               invoke: {
                 id: 'localesMachine',
                 src: 'localesMachine',

@@ -45,7 +45,7 @@ const Index: FC = () => {
           <BestBrands />
         </div>
       </div>
-      {!isIntersecting && <GoTop />}
+      {<GoTop {...{ isIntersecting }} />}
       <ChangeLanguage />
     </div>
   );
